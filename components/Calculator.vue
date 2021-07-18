@@ -26,6 +26,7 @@
 
 <script>
 export default {
+    //varible
   data() {
     return {
         previousNum:'',
@@ -35,11 +36,11 @@ export default {
     }
   },
   methods:{
-      //Delte number
+    //slice number from currNum
     DeleteNumber(){
       this.currNum = this.currNum.slice(0, this.currNum.length-1);
     },
-    //Clear number
+    //Clear number from currNum
     ClearNumber(){
       this.currNum = '';
     },
@@ -49,6 +50,7 @@ export default {
             this.currNum = `${this.currNum}${'.'}`;
         }
     },
+    //append number to a currNum
     AppendNumber(n){
         if(this.isOperatorBtnPress){
             this.currNum = '';
@@ -56,11 +58,13 @@ export default {
         }
         this.currNum = `${this.currNum}${n}`;
     },
+    //get operator
     GetOperator(op){
         this.operator = op;
         this.previousNum = this.currNum;
         this.isOperatorBtnPress = true;
     },
+    //calculate number
     Calculate(){
         var tempCurrNum = this.currNum;
         switch(this.operator){
