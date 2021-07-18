@@ -65,16 +65,19 @@ export default {
         var tempCurrNum = this.currNum;
         switch(this.operator){
             case '+':{
-                this.currNum = parseFloat(this.previousNum) + parseFloat(tempCurrNum);
+                this.currNum = (parseFloat(this.previousNum) + parseFloat(tempCurrNum)).toString();
             }break;
             case '-':{
-                this.currNum = parseFloat(this.previousNum) - parseFloat(tempCurrNum);
+                this.currNum = (parseFloat(this.previousNum) - parseFloat(tempCurrNum)).toString();
             }break;
             case '*':{
-                this.currNum = parseFloat(this.previousNum) * parseFloat(tempCurrNum);
+                this.currNum = (parseFloat(this.previousNum) * parseFloat(tempCurrNum)).toString();
             }break;
             case '/':{
-                this.currNum = parseFloat(this.previousNum) / parseFloat(tempCurrNum);
+                this.currNum = (parseFloat(this.previousNum) / parseFloat(tempCurrNum)).toString();
+            }break;
+            default: {
+                this.currNum = "invalid";
             }break;
         }
         this.previousNum = '';
