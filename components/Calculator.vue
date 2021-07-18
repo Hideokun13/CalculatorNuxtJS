@@ -50,7 +50,7 @@ export default {
         }
     },
     AppendNumber(n){
-        if(this.isOperationBtnPress){
+        if(this.isOperatorBtnPress){
             this.currNum = '';
             this.isOperatorBtnPress = false;
         }
